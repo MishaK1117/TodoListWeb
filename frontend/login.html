@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.2 22c4.53 0 8.45-2.91 9.76-7.24.11-.35.01-.74-.25-1s-.64-.36-1-.25c-.78.23-1.58.35-2.38.35-4.52 0-8.2-3.68-8.2-8.2 0-.8.12-1.6.35-2.38a1.002 1.002 0 0 0-1.25-1.25A10.17 10.17 0 0 0 2 11.8C2 17.42 6.58 22 12.2 22">
+                </path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" >
+                <path d="M12 6.99a5.01 5.01 0 1 0 0 10.02 5.01 5.01 0 1 0 0-10.02M11 22h2v-4h-2zm0-16h2V2h-2zm-9 5h4v2H2zm16 0h4v2h-4zM4.22 18.36l.71.71.71.71 1.41-1.42 1.41-1.41-.7-.71-.71-.7-1.41 1.41zM18.36 4.22l-1.41 1.42-1.41 1.41.7.71.71.7 1.41-1.41 1.42-1.41-.71-.71zm-9.9 2.83L7.05 5.64 5.64 4.22l-.71.71-.71.71 1.42 1.41 1.41 1.41.71-.7zm7.08 9.9 1.41 1.41 1.41 1.42.71-.71.71-.71-1.42-1.41-1.41-1.41-.71.7z"></path>
+            </svg>
+        </button>
+        <h1 class="title">Login</h1>
+
+        <form id="login-form" class="auth-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <p id="error-msg" class="error-msg"></p>
+            <button type="submit" class="auth-btn primary full-width">Login</button>
+        </form>
+
+        <p class="auth-switch">Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

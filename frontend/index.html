@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="todo-container">
+
+        <div class="title">
+            <h1>Todo List</h1>
+            <div class="header-actions">
+            <button id="logout-btn" onclick="logout()">
+                <i class="bx bx-log-out"></i> Logout
+            </button>
+            <button id="theme-switch">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.2 22c4.53 0 8.45-2.91 9.76-7.24.11-.35.01-.74-.25-1s-.64-.36-1-.25c-.78.23-1.58.35-2.38.35-4.52 0-8.2-3.68-8.2-8.2 0-.8.12-1.6.35-2.38a1.002 1.002 0 0 0-1.25-1.25A10.17 10.17 0 0 0 2 11.8C2 17.42 6.58 22 12.2 22">
+                    </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M12 6.99a5.01 5.01 0 1 0 0 10.02 5.01 5.01 0 1 0 0-10.02M11 22h2v-4h-2zm0-16h2V2h-2zm-9 5h4v2H2zm16 0h4v2h-4zM4.22 18.36l.71.71.71.71 1.41-1.42 1.41-1.41-.7-.71-.71-.7-1.41 1.41zM18.36 4.22l-1.41 1.42-1.41 1.41.7.71.71.7 1.41-1.41 1.42-1.41-.71-.71zm-9.9 2.83L7.05 5.64 5.64 4.22l-.71.71-.71.71 1.42 1.41 1.41 1.41.71-.7zm7.08 9.9 1.41 1.41 1.41 1.42.71-.71.71-.71-1.42-1.41-1.41-1.41-.71.7z"></path>
+                </svg>
+            </button>
+            </div>
+        </div>
+        <div class="input-place">
+            <input type="text" class="task-input" placeholder="Add a new task..." id="taskinput">
+            <button class="task-btn" id="task-btn" onclick="addTodo()">
+                <i class="bx bx-list-plus"></i> Add
+            </button>
+        </div>
+
+        <div class="sort-sect">
+            <button class="sort-btn" id="sortbtn" onclick="sortTodos()">
+                <i class="bx bx-sort"></i> Sort by Date <i class="bx bx-sort"></i>
+            </button>
+        </div>
+        <!-- Uncompleted Tasks Section -->
+        <div class="todo-section">
+            <div class="sect-header active" onclick="toggleSection('uncompleted')">
+                <div class="sect-header-row">
+                    <h2>Uncompleted Tasks</h2>
+                    <span class="count" id="uncompleted-count">0</span>
+                </div>
+                <span class="chevron" id="uncompleted-chevron">
+                    <i class="bx bx-chevron-down"></i>
+                </span>
+            </div>
+            <div class="sect-content expanded" id="uncompleted-section">
+                <ul id="uncompleted-list">
+                </ul>
+
+            </div>
+        </div>
+        
+        <!-- Completed Tasks Section -->
+
+        <div class="todo-section">
+            <div class="sect-header active" onclick="toggleSection('completed')">
+                <div class="sect-header-row">
+                    <h2>Completed Tasks</h2>
+                    <span class="count" id="completed-count">0</span>
+                </div>
+                <span class="chevron" id="completed-chevron">
+                    <i class="bx bx-chevron-down"></i>
+                </span>
+            </div>
+            <div class="sect-content expanded" id="completed-section">
+                <ul id="completed-list">
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="theme.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>
